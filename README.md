@@ -1,5 +1,7 @@
 # design-pack
 
+![CI](https://github.com/xronocode/design-pack/actions/workflows/ci.yml/badge.svg)
+
 Русскоязычный набор скилов, который учит агента проектировать, а не расставлять карточки. Превращает «сделай красиво» в контролируемый процесс: направление → сборка → аудит на клише → шлифовка → визуальное подтверждение.
 
 *EN: open Russian-language design skills pack for AI coding agents — design vocabulary, AI-slop detector, 12 styles with tokens, project design memory, visual verify loop. MIT.*
