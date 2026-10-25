@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Специмен стиля — neo-brutalist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFF8E7; --surface:#FFFFFF; --ink:#0F0F0F;
+    --accent:#FF5D01; --blue:#2F7CF6; --yellow:#FFD131; --green:#22C55E;
+    --border:3px solid var(--ink);
+    --shadow:6px 6px 0 var(--ink);
+  }
+  *{box-sizing:border-box; margin:0}
+  body{background:var(--bg); color:var(--ink); font-family:'Space Grotesk',sans-serif; font-size:16px; line-height:1.5}
+  .wrap{max-width:960px; margin:0 auto; padding:48px 24px}
+  .tag{display:inline-block; background:var(--yellow); border:var(--border); box-shadow:3px 3px 0 var(--ink);
+    font-weight:700; font-size:.8125rem; letter-spacing:.04em; text-transform:uppercase; padding:6px 12px; margin-bottom:32px}
+  h1{font-weight:700; font-size:clamp(2.5rem,7vw,4.25rem); line-height:1.0; text-transform:uppercase; letter-spacing:.01em; margin:0 0 24px}
+  h1 .hl{background:var(--accent); color:var(--surface); padding:0 .12em; display:inline-block}
+  .lede{font-size:1.125rem; max-width:52ch; margin-bottom:40px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px}
+  .card{background:var(--surface); border:var(--border); box-shadow:var(--shadow); padding:24px;
+    transition:transform .1s steps(2), box-shadow .1s steps(2)}
+  .card:hover{transform:translate(-2px,-2px); box-shadow:8px 8px 0 var(--ink)}
+  .card .num{display:inline-block; font-weight:700; background:var(--green); border:2px solid var(--ink);
+    width:2.25rem; height:2.25rem; line-height:2rem; text-align:center; margin-bottom:16px}
+  .card.blue .num{background:var(--blue); color:var(--surface)}
+  .card.accent .num{background:var(--accent); color:var(--surface)}
+  .card h2{font-weight:700; font-size:1.25rem; text-transform:uppercase; margin-bottom:8px}
+  .card p{font-size:.9375rem}
+  .cta{margin-top:48px; display:flex; gap:24px; flex-wrap:wrap; align-items:center}
+  .btn{background:var(--accent); color:var(--surface); border:var(--border); box-shadow:var(--shadow);
+    font:700 1rem 'Space Grotesk',sans-serif; text-transform:uppercase; letter-spacing:.03em;
+    padding:14px 28px; cursor:pointer; transition:transform .1s steps(2), box-shadow .1s steps(2)}
+  .btn:hover{transform:translate(3px,3px); box-shadow:3px 3px 0 var(--ink)}
+  .btn:active{transform:translate(6px,6px); box-shadow:0 0 0 var(--ink)}
+  .link{font-weight:700; color:var(--ink); border-bottom:3px solid var(--blue); text-decoration:none}
+  .marquee-note{margin-top:48px; border:var(--border); background:var(--surface); padding:12px 16px;
+    font-size:.8125rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <span class="tag">Специмен 03</span>
+  <h1>Дизайн без<br><span class="hl">полутонов</span></h1>
+  <p class="lede">Толстые рамки, плоские тени, честные цвета. Каждый элемент либо есть, либо его нет — прозрачностей и blur здесь не существует.</p>
+
+  <section class="grid">
+    <div class="card">
+      <span class="num">1</span>
+      <h2>Рамка 3px</h2>
+      <p>Граница у всего: карточек, кнопок, бейджей. Одинаковая, чёрная, без вариантов.</p>
+    </div>
+    <div class="card blue">
+      <span class="num">2</span>
+      <h2>Плоская тень</h2>
+      <p>Сдвиг 6px без размытия. Hover — сдвиг больше, тень длиннее. Никаких полупрозрачных падений.</p>
+    </div>
+    <div class="card accent">
+      <span class="num">3</span>
+      <h2>Цвет-удар</h2>
+      <p>Насыщенные заливки блоками: апельсин, синий, жёлтый, зелёный. Без градиентов между ними.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <button class="btn">Забрать себе</button>
+    <a class="link" href="#">Как это устроено</a>
+  </div>
+
+  <p class="marquee-note">Моушн: 100мс, steps() — жёстко и быстро. Никаких ease и плавностей.</p>
+</main>
+</body>
+</html>

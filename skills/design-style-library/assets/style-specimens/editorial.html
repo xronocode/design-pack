@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Специмен стиля — editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7F2; --surface:#FFFFFF; --text:#1A1612; --muted:#8A8078; --accent:#7A1E1E;
+    --line:#E5DED4;
+  }
+  *{box-sizing:border-box; margin:0}
+  body{background:var(--bg); color:var(--text); font-family:Inter,sans-serif; font-size:17px; line-height:1.7}
+  .sheet{max-width:720px; margin:0 auto; padding:64px 24px}
+  .masthead{display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--line); padding-bottom:16px}
+  .masthead .title{font-family:Fraunces,serif; font-weight:600; font-size:1.25rem}
+  .masthead .issue{font-size:.8125rem; color:var(--muted); letter-spacing:.06em; text-transform:uppercase}
+  article{margin-top:48px}
+  .kicker{font-size:.8125rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:500}
+  h1{font-family:Fraunces,serif; font-weight:600; font-size:clamp(2.25rem,6vw,3.5rem); line-height:1.08; letter-spacing:-.01em; margin:16px 0}
+  .standfirst{font-family:Fraunces,serif; font-style:italic; font-size:1.25rem; line-height:1.5; color:var(--text); margin:0 0 8px}
+  .byline{font-size:.8125rem; color:var(--muted); margin:24px 0 32px; padding-bottom:24px; border-bottom:1px solid var(--line)}
+  p.body{margin-bottom:1.5em; max-width:68ch}
+  p.body:first-of-type::first-letter{
+    font-family:Fraunces,serif; font-weight:600; float:left; font-size:4.4em; line-height:.82;
+    padding:.08em .12em 0 0; color:var(--accent);
+  }
+  .pullquote{font-family:Fraunces,serif; font-style:italic; font-size:1.5rem; line-height:1.35;
+    border-left:2px solid var(--accent); padding:8px 0 8px 24px; margin:40px 0; color:var(--accent)}
+  figure{margin:40px 0}
+  .plate{background:var(--surface); border:1px solid var(--line); padding:48px 24px; text-align:center;
+    font-family:Fraunces,serif; font-size:.9375rem; color:var(--muted)}
+  figcaption{font-size:.8125rem; color:var(--muted); margin-top:8px}
+  .colophon{margin-top:56px; border-top:1px solid var(--line); padding-top:16px;
+    display:flex; justify-content:space-between; font-size:.8125rem; color:var(--muted)}
+  .colophon a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent)}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="masthead">
+    <span class="title">Издание</span>
+    <span class="issue">№ 02 · Октябрь 2026</span>
+  </header>
+
+  <article>
+    <p class="kicker">Дизайн-процесс</p>
+    <h1>Вкус — это дисциплина, а не вдохновение</h1>
+    <p class="standfirst">Редакционная типографика возвращает интерфейсу главное: уважение к чтению.</p>
+    <p class="byline">Текст: Редакция · Специмен стиля editorial</p>
+
+    <p class="body">Журнальная вёрстка строится на мерной колонке: шестьдесят пять — семьдесят пять знаков в строке, не больше. Глаз не теряет строку при возврате, а воздух между абзацами работает параграфной пунктуацией. Интерфейсы, выросшие из дашбордов, разучились это делать.</p>
+    <p class="body">Вторая опора — контраст прямого и курсивного. Курсив здесь — интонация: одна врезка, одна цитата. Не приём по умолчанию для всех заголовков подряд, а точечное усиление.</p>
+
+    <blockquote class="pullquote">Пробел — это не пустота между содержанием, а часть содержания.</blockquote>
+
+    <p class="body">Палитра сведена к бумаге и бордо: тёплый фон читается как материал, акцент появляется только там, где есть смысл — в кикере, буквице, цитате. Ни одного декоративного элемента, который нельзя объяснить.</p>
+
+    <figure>
+      <div class="plate">Иллюстрация / таблица / снимок<br>в рамке surface на бумаге</div>
+      <figcaption>Подпись под иллюстрацией — 13 pt, приглушённая.</figcaption>
+    </figure>
+  </article>
+
+  <footer class="colophon">
+    <span>Специмен стиля editorial</span>
+    <a href="#">Читать далее →</a>
+  </footer>
+</div>
+</body>
+</html>

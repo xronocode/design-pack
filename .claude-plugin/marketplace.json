@@ -1,0 +1,26 @@
+{
+  "name": "design-pack",
+  "owner": {
+    "name": "XronoCode",
+    "email": "xronocode@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Русскоязычный дизайн-скилпак для AI-агентов: словарь, анти-слоуп, библиотека стилей, память вкуса, визуальная петля",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "design-pack",
+      "description": "Дизайн-словарь, slop-детектор, 12 стилей с токенами, память вкуса DESIGN.md, петля скриншот→фикс",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/design-vocabulary",
+        "./skills/design-slop-detector",
+        "./skills/design-style-library",
+        "./skills/design-memory",
+        "./skills/design-loop"
+      ]
+    }
+  ]
+}
