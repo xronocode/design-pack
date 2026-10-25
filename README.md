@@ -17,8 +17,8 @@ CLI спросит, какие скилы поставить и для каки�
 Другие варианты:
 
 ```bash
-# только конкретные скилы и агент
-npx skills add xronocode/design-pack --skill design-slop-detector -a claude-code
+# без интерактивных вопросов (CI/скрипты)
+npx skills add xronocode/design-pack --skill design-slop-detector -a claude-code -y
 
 # глобально, для всех проектов
 npx skills add xronocode/design-pack -g
