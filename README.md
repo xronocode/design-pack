@@ -1,20 +1,30 @@
 # design-pack
 
-> **EN TL;DR:** an open, Russian-language design skills pack for AI coding agents (Claude Code, Codex, Cursor, Gemini CLI, OpenCode…). Five composable skills: a design verb vocabulary, a ~60-check AI-slop detector, a catalog of 12 styles with tokens and HTML specimens, project design memory (DESIGN.md + taste ledger), and a screenshot→verdict→fix visual loop. Install: `npx skills add xronocode/design-pack`. MIT.
-
 Русскоязычный набор скилов, который учит агента проектировать, а не расставлять карточки. Превращает «сделай красиво» в контролируемый процесс: направление → сборка → аудит на клише → шлифовка → визуальное подтверждение.
 
-## Установка
+*EN: open Russian-language design skills pack for AI coding agents — design vocabulary, AI-slop detector, 12 styles with tokens, project design memory, visual verify loop. MIT.*
+
+## Установка — одна команда
 
 ```bash
 npx skills add xronocode/design-pack
-# интерактивно: выбрать скилы × агентов (claude-code, codex, cursor, …)
+```
 
-# точечно:
-npx skills add xronocode/design-pack --skill design-vocabulary -a claude-code
+CLI спросит, какие скилы поставить и для каких агентов (Claude Code, Codex, Cursor, Gemini CLI, OpenCode и ещё ~30), после чего скопирует их в конфиг выбранного агента — в проект `.claude/skills/`, `.agents/skills/` и т.п.
 
-# глобально для всех проектов:
+Как это работает: `npx` запускает официальный CLI [`skills`](https://github.com/vercel-labs/skills) (skills.sh), а реестром служит сам GitHub-репозиторий. **Ничего публиковать в npm не нужно** — команда оживает в момент, когда репо становится публичным.
+
+Другие варианты:
+
+```bash
+# только конкретные скилы и агент
+npx skills add xronocode/design-pack --skill design-slop-detector -a claude-code
+
+# глобально, для всех проектов
 npx skills add xronocode/design-pack -g
+
+# найти пакеты вроде этого
+npx skills find design
 ```
 
 Для Claude Code репо можно добавить и как plugin-маркетплейс:
@@ -23,12 +33,14 @@ npx skills add xronocode/design-pack -g
 /plugin marketplace add xronocode/design-pack
 ```
 
+После установки просто напиши в чате агента: `прогони audit этого экрана`, `сделай direction для лендинга` — скилы подхватятся сами по описаниям.
+
 ## Состав
 
 | Скил | Что делает |
 |---|---|
 | `design-vocabulary` | Словарь команд-глаголов (`polish`, `critique`, `direction`, `audit`, `tokens`, `restyle`) и порядок работы. Точка входа, маршрутизирует на остальные скилы. |
-| `design-slop-detector` | ~60 проверок на шаблонный AI-дизайн: цвет, типографика, layout, копирайт, компоненты, изображения. Каждый хит — с направлением исправления. |
+| `design-slop-detector` | 60 проверок на шаблонный AI-дизайн: цвет, типографика, layout, копирайт, компоненты, изображения. Каждый хит — с направлением исправления. |
 | `design-style-library` | 12 стилей с полными токенами (палитра, шрифтовые пары, сетка, радиусы, тени, моушен), сценариями применения и HTML-образцами. Подбор: 6 кандидатов → 3 → 1. |
 | `design-memory` | Память вкуса проекта: `DESIGN.md` (токены, компоненты, голос) + appearance-ledger (журнал принятых решений). Чем дольше работаешь, тем точнее результат. |
 | `design-loop` | Петля «скриншот → вердикт → фикс → повторный скрин». Дизайн не считается готовым, пока не подтверждён глазами агента. Работает с chrome-devtools-mcp или браузерными инструментами агента. |
